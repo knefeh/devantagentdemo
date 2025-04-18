@@ -1,4 +1,3 @@
-import ballerina/http;
 import ballerinax/ai;
 
 final ai:AzureOpenAiProvider _MathTutorModel = check new (serviceUrl, apiKey, deploymentId, apiVersion);
