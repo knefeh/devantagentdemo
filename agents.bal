@@ -1,6 +1,6 @@
 import ballerinax/ai;
 
-final ai:AzureOpenAiProvider _MathTutorModel = check new (serviceUrl, apiKey, deploymentId, apiVersion);
+final ai:OpenAiProvider _MathTutorModel = check new (apiKey, ai:GPT_4O_MINI);
 final ai:Agent _MathTutorAgent = check new (
     systemPrompt = {role: "math tutor", instructions: string `You are a school tutor assistant. Provide answers to students' questions so they can compare their answers. Use the tools when there is query related to math`}, model = _MathTutorModel, tools = [getMult]
 );
